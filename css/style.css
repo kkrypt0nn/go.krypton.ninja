@@ -1,0 +1,133 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  border-top: 2px solid #c9cacc;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: #1d1f21;
+  color: #c9cacc;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Menlo", "Meslo LG", monospace;
+  line-height: 1.725;
+  text-rendering: geometricPrecision;
+  flex: 1;
+}
+
+div {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+}
+
+h1,
+h4 {
+  text-align: center;
+}
+
+a {
+  color: #ccc0f6;
+  text-decoration: none;
+  background-image: linear-gradient(
+    transparent,
+    transparent 5px,
+    #c9cacc 5px,
+    #c9cacc
+  );
+  background-position: bottom;
+  background-size: 100% 6px;
+  background-repeat: repeat-x;
+}
+
+a:hover {
+  background-image: linear-gradient(
+    transparent,
+    transparent 4px,
+    #7a5ae9 4px,
+    #7a5ae9
+  );
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  color: #908d8d;
+  vertical-align: top;
+  text-align: center;
+  font-size: 12px;
+}
+#footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#footer li {
+  display: inline-block;
+  margin-right: 15px;
+  border-right: 1px solid;
+  border-color: #908d8d;
+  vertical-align: middle;
+}
+#footer li a {
+  margin-right: 15px;
+}
+#footer li:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
+#footer li:last-child a {
+  margin-right: 0;
+}
+#footer a {
+  color: #ccc0f6;
+  text-decoration: underline;
+  background-image: none;
+}
+#footer a:hover {
+  color: #d6cdf8;
+}
+#footer .footer-left {
+  height: 20px;
+  vertical-align: middle;
+  line-height: 20px;
+}
+@media (min-width: 39rem) {
+  #footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    margin-bottom: 20px;
+  }
+  #footer .footer-left {
+    align-self: flex-start;
+    margin-right: 20px;
+  }
+  #footer .footer-right {
+    align-self: flex-end;
+  }
+}
