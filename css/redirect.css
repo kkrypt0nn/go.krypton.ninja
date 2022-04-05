@@ -1,0 +1,53 @@
+@import "/css/font-awesome/css/all.min.css";
+
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    border-top: 2px solid #c9cacc;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-color: #1d1f21;
+    color: #c9cacc;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Menlo", "Meslo LG", monospace;
+    line-height: 1.725;
+    text-rendering: geometricPrecision;
+    flex: 1;
+}
+
+div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+
+h1,
+h4 {
+    text-align: center;
+}
+
+a {
+    color: #ccc0f6;
+    text-decoration: none;
+    background-image: linear-gradient(transparent,
+            transparent 5px,
+            #c9cacc 5px,
+            #c9cacc);
+    background-position: bottom;
+    background-size: 100% 6px;
+    background-repeat: repeat-x;
+}
+
+a:hover {
+    background-image: linear-gradient(transparent,
+            transparent 4px,
+            #7a5ae9 4px,
+            #7a5ae9);
+}
