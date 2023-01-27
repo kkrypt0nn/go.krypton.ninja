@@ -11,7 +11,7 @@ html {
 body {
   margin: 0;
   height: 100%;
-  background-color: #1d1f21;
+  background-color: #171721;
   color: #c9cacc;
   font-size: 14px;
   font-family: "Source Code Pro", "Meslo LG", monospace;
@@ -29,7 +29,7 @@ body {
 }
 
 .name:hover {
-  background-image: linear-gradient(transparent, transparent 4px, #7a5ae9 4px, #7a5ae9);
+  background-image: linear-gradient(transparent, transparent 4px, #bebefe 4px, #bebefe);
 }
 
 h1 {
