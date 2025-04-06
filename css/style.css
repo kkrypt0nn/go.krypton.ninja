@@ -77,7 +77,7 @@ h3 {
   color: white;
   text-decoration: none;
   border-radius: 20px;
-  transition: all 500ms ease;
+  transition: background-color 500ms ease;
 }
 
 .link:hover {
