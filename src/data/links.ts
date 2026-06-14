@@ -28,6 +28,7 @@ export const links: Link[] = [
     name: "Buy Me a Coffee",
     icon: faMugSaucer,
     url: "https://buymeacoffee.com/kkrypt0nn",
+    onHomepage: true,
   },
   {
     slug: "ctf",
@@ -70,7 +71,6 @@ export const links: Link[] = [
     name: "Ko-fi",
     icon: faKoFi,
     url: "https://ko-fi.com/kkrypt0nn",
-    onHomepage: true,
   },
   {
     slug: "mail",
