@@ -1,0 +1,65 @@
+---
+import LinkCard from "../components/LinkCard.astro";
+import { links } from "../data/links";
+import "../styles/global.css";
+
+const homepageLinks = links.filter((link) => link.onHomepage);
+---
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="ABS{Wh3rE_D0_Y0u_W4nt_T0_G0?}" />
+
+    <title>Go to</title>
+
+    <link rel="shortcut icon" href="https://github.com/kkrypt0nn.png" />
+    <link
+        rel="icon"
+        type="image/png"
+        href="https://github.com/kkrypt0nn.png"
+        sizes="192x192"
+    />
+    <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="https://github.com/kkrypt0nn.png"
+    />
+
+    <meta name="og:image" content="https://krypton.ninja/static/banner.webp" />
+    <meta
+        name="description"
+        content="Hey there, I'm Krypton! (Coming from the Krypton element 36) I'm a cloud engineer, developer, security researcher and overall security enthusiast. I like computers (surprised?) and anything related to cyber security, especially information gathering and reverse engineering."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Krypton" />
+    <meta property="og:url" content="https://go.krypton.ninja" />
+    <meta property="og:site_name" content="Krypton" />
+    <meta
+        property="og:description"
+        content="Hey there, I'm Krypton! (Coming from the Krypton element 36) I'm a cloud engineer, developer, security researcher and overall security enthusiast. I like computers (surprised?) and anything related to cyber security, especially information gathering and reverse engineering."
+    />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="viewport" content="width=device-width" />
+</head>
+<html lang="en">
+    <body class="bg-zinc-950 text-zinc-100 font-mono">
+        <main
+            class="mx-auto flex min-h-screen max-w-2xl flex-col items-center px-6 py-16"
+        >
+            <img
+                src="https://github.com/kkrypt0nn.png"
+                alt="Krypton"
+                class="mb-6 h-32 w-32 rounded-full border-2 border-zinc-800"
+            />
+            <h1 class="text-5xl font-bold">Krypton</h1>
+            <p class="mt-4 text-center text-zinc-400">
+                Cloud Engineer | Security enthusiast & researcher | Developer
+            </p>
+            <div class="mt-12 flex w-full flex-col gap-3">
+                {homepageLinks.map((link) => <LinkCard link={link} />)}
+            </div>
+        </main>
+    </body>
+</html>

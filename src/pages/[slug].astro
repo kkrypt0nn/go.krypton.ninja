@@ -1,0 +1,53 @@
+---
+import { links, type Link } from "../data/links";
+import "../styles/global.css";
+
+export async function getStaticPaths() {
+    return links.flatMap((link: Link) => [
+        {
+            params: {
+                slug: link.slug,
+            },
+            props: {
+                link,
+            },
+        },
+        ...(link.slugAliases ?? []).map((alias) => ({
+            params: {
+                slug: alias,
+            },
+            props: {
+                link,
+            },
+        })),
+    ]);
+}
+
+const { link } = Astro.props;
+---
+
+<head>
+    <meta charset="utf-8" />
+    <title>Redirecting you...</title>
+    <meta http-equiv="refresh" content={`0;url=${link.url}`} />
+    <link rel="canonical" href={link.url} />
+</head>
+<html>
+    <body class="bg-zinc-950 text-zinc-100 font-mono">
+        <div
+            class="mx-auto flex min-h-screen flex-col items-center justify-center px-6 text-center"
+        >
+            <h1 class="text-3xl font-bold">
+                Redirecting you to {link.name}...
+            </h1>
+            <h2 class="mt-4 text-zinc-400">
+                Redirect doesn't work? Click
+                <a
+                    href={link.url}
+                    class="text-indigo-400 transition-colors hover:text-indigo-300"
+                    >here</a
+                >.
+            </h2>
+        </div>
+    </body>
+</html>

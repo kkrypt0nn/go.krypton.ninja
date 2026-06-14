@@ -1,0 +1,22 @@
+---
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import type { Link } from "../data/links";
+
+type Props = {
+    link: Link;
+};
+
+const { link } = Astro.props;
+
+const faIcon = icon(link.icon, {
+    classes: ["w-5", "h-5"],
+});
+---
+
+<a
+    href={`/${link.slug}`}
+    class="flex items-center justify-center gap-3 rounded-xl border border-zinc-800 bg-zinc-900 p-4 transition-all hover:scale-[1.02] hover:border-indigo-300"
+>
+    <Fragment set:html={faIcon.html} />
+    <span class="font-medium">{link.name}</span>
+</a>

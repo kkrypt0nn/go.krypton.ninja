@@ -1,0 +1,16 @@
+name: Deploy go.krypton.ninja Website
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy_website:
+    uses: kkrypt0nn/actions/.github/workflows/deploy_website.yaml@f87e74587c75a99d661e5966fc41552d106a3712 # v0.1.1
+    with:
+      working-directory: "."
+      build-path: dist
